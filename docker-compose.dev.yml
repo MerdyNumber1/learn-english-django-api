@@ -12,6 +12,7 @@ services:
       - ${APP_PORT}:${APP_PORT}
     volumes:
       - ./app/:/usr/src/app/
+      - /usr/src/app/wait-for-it
   postgres:
     image: postgres
     restart: on-failure
