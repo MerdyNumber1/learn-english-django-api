@@ -3,11 +3,18 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[scripts]
+dev = "py learnenglish/manage.py runserver 0.0.0.0:$APP_PORT"
+
 [packages]
 django = "*"
 django-environ = "*"
-graphene-django = "*"
 psycopg2 = "*"
+djangorestframework = "*"
+djangorestframework-jwt = "*"
+drf-yasg = "*"
+djangorestframework-simplejwt = "*"
+drfdocs = "*"
 
 [dev-packages]
 
