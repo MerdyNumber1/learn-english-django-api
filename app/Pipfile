@@ -11,10 +11,8 @@ django = "*"
 django-environ = "*"
 psycopg2 = "*"
 djangorestframework = "*"
-djangorestframework-jwt = "*"
 drf-yasg = "*"
 djangorestframework-simplejwt = "*"
-drfdocs = "*"
 
 [dev-packages]
 
