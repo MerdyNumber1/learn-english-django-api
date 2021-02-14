@@ -13,6 +13,9 @@ psycopg2 = "*"
 djangorestframework = "*"
 drf-yasg = "*"
 djangorestframework-simplejwt = "*"
+celery = "*"
+redis = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
