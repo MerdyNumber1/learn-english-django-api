@@ -5,8 +5,8 @@ from rest_framework.routers import SimpleRouter
 from .views import UserViewSet
 
 
-router = SimpleRouter(trailing_slash=False)
-router.register('', UserViewSet, basename='user')
+router = SimpleRouter()
+router.register('', UserViewSet, basename='profile')
 
 urlpatterns = [
     path('token/', jwt_views.TokenObtainPairView.as_view(), name='get token'),
