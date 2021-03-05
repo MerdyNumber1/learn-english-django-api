@@ -16,6 +16,10 @@ djangorestframework-simplejwt = "*"
 celery = "*"
 redis = "*"
 django-cors-headers = "*"
+mypy = "*"
+flake8 = "*"
+black = "*"
+pre-commit = "*"
 
 [dev-packages]
 
