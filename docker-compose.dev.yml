@@ -3,7 +3,7 @@ version: "3"
 services:
   web_app:
     build:
-      context: ./app
+      context: ./
       dockerfile: Dockerfile.dev
     env_file:
       - .env
@@ -11,8 +11,8 @@ services:
     ports:
       - ${APP_PORT}:${APP_PORT}
     volumes:
-      - ./app/:/usr/src/app/
-      - /usr/src/app/wait-for-it
+      - ./:/usr/src/app/
+      - /usr/src/app/wait-for-it/
   postgres:
     image: postgres
     restart: on-failure

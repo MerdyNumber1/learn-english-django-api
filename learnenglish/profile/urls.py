@@ -10,6 +10,10 @@ router.register('', UserViewSet, basename='profile')
 
 urlpatterns = [
     path('token/', jwt_views.TokenObtainPairView.as_view(), name='get token'),
-    path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token refresh'),
-    *router.urls
+    path(
+        'token/refresh/',
+        jwt_views.TokenRefreshView.as_view(),
+        name='token refresh',
+    ),
+    *router.urls,
 ]

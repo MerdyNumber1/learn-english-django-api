@@ -2,9 +2,7 @@ import environ
 from pathlib import Path
 from datetime import timedelta
 
-env = environ.Env(
-    DEBUG=(bool, False)
-)
+env = environ.Env(DEBUG=(bool, False))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,7 +30,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'corsheaders',
-    'profile'
+    'profile',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +75,7 @@ DATABASES = {
         'USER': env('POSTGRES_USER'),
         'PASSWORD': env('POSTGRES_PW'),
         'HOST': 'postgres',
-        'PORT': env('POSTGRES_PORT')
+        'PORT': env('POSTGRES_PORT'),
     }
 }
 
@@ -140,6 +138,4 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
-]
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
