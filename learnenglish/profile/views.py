@@ -14,7 +14,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
     @action(
         detail=False,
-        methods=['get'],
+        methods=['GET'],
         url_path='me',
         permission_classes=[permissions.IsAuthenticated],
     )

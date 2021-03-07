@@ -1,13 +1,16 @@
 repos:
--   repo: https://github.com/ambv/black
-    rev: stable
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v2.5.0"
     hooks:
-    - id: black
-      args:
-        - -S
-      language_version: python3.8
--   repo: https://gitlab.com/pycqa/flake8
-    rev: stable
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+  - repo: git@github.com:pre-commit/mirrors-yapf.git
+    rev: v0.26.0
     hooks:
-    - id: flake8
-
+      - id: yapf
+        args: [ '--style=.style.yapf', '--parallel', '--in-place', '-ir', 'learnenglish/' ]
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: '3.8.4'
+    hooks:
+      - id: flake8
+        args: ['--config=.flake8']

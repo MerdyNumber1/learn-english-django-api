@@ -10,11 +10,9 @@ class UserAdmin(BaseUserAdmin):
     add_form = UserCreationForm
     list_display = ('username', 'email')
 
-    fieldsets = ((None, {'fields': ('username', 'email', 'password')}),)
+    fieldsets = ((None, {'fields': ('username', 'email', 'password')}), )
 
-    add_fieldsets = (
-        (None, {'fields': ('username', 'email', 'password1', 'password2')}),
-    )
+    add_fieldsets = ((None, {'fields': ('username', 'email', 'password1', 'password2')}), )
 
 
 admin.site.register(User, UserAdmin)

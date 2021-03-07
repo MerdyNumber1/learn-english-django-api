@@ -30,24 +30,21 @@ class Migration(migrations.Migration):
                 ),
                 (
                     'last_login',
-                    models.DateTimeField(
-                        blank=True, null=True, verbose_name='last login'
-                    ),
+                    models.DateTimeField(blank=True, null=True, verbose_name='last login'),
                 ),
                 (
                     'is_superuser',
                     models.BooleanField(
                         default=False,
-                        help_text='Designates that this user has all permissions without explicitly assigning them.',
+                        help_text='Designates that this user has all permissions without'
+                        ' explicitly assigning them.',
                         verbose_name='superuser status',
                     ),
                 ),
                 ('username', models.CharField(max_length=56)),
                 (
                     'email',
-                    models.EmailField(
-                        db_index=True, max_length=254, unique=True
-                    ),
+                    models.EmailField(db_index=True, max_length=254, unique=True),
                 ),
                 ('is_active', models.BooleanField(default=True)),
                 ('is_staff', models.BooleanField(default=False)),
@@ -57,7 +54,9 @@ class Migration(migrations.Migration):
                     'groups',
                     models.ManyToManyField(
                         blank=True,
-                        help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.',
+                        help_text='The groups this user belongs to. A user '
+                        'will get all permissions '
+                        ' granted to each of their groups.',
                         related_name='user_set',
                         related_query_name='user',
                         to='auth.Group',
