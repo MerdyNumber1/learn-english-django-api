@@ -8,7 +8,7 @@ from .dto import UserDTO
 class UserSerializer(serializers.ModelSerializer):
     class Meta(object):
         model = User
-        fields = ('id', 'email', 'username', 'password')
+        fields = ('id', 'email', 'username', 'password', 'created_at')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data: UserDTO) -> User:
