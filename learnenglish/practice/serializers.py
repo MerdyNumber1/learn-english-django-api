@@ -4,6 +4,6 @@ from .models import Exercise
 
 
 class ExerciseSerializer(serializers.ModelSerializer):
-    class Meta(object):
+    class Meta:
         model = Exercise
         fields = ('title', 'description', 'correct_option')

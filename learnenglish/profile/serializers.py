@@ -6,9 +6,11 @@ from .dto import UserDTO
 
 
 class UserSerializer(serializers.ModelSerializer):
-    class Meta(object):
+    registration_date = serializers.ReadOnlyField()
+
+    class Meta:
         model = User
-        fields = ('id', 'email', 'username', 'password', 'created_at')
+        fields = ('id', 'email', 'username', 'password', 'registration_date')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data: UserDTO) -> User:

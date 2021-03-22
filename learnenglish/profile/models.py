@@ -18,9 +18,13 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     objects = UserManager()
 
+    @property
+    def registration_date(self) -> str:
+        return self.created_at.strftime('%d.%m.%Y')
+
     class Meta:
         verbose_name = 'Пользователь'
         verbose_name_plural = 'Пользователи'
 
     def __str__(self) -> str:
-        return f'<User {self.email}'
+        return f'<User {self.email}>'
