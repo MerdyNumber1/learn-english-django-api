@@ -4,6 +4,10 @@ from django.db import models
 class ExerciseAnswerOption(models.Model):
     option = models.CharField(max_length=200)
 
+    def __str__(self) -> str:
+        return str(self.option)
+
+
 
 class Exercise(models.Model):
     title = models.CharField(max_length=200)
@@ -17,6 +21,9 @@ class Exercise(models.Model):
     class Meta:
         verbose_name = 'Задание'
         verbose_name_plural = 'Задания'
+
+    def __str__(self) -> str:
+        return str(self.title)
 
 
 class ExerciseReport(models.Model):
