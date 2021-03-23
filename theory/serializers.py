@@ -4,13 +4,15 @@ from .models import Topic, Article
 
 
 class TopicSerializer(serializers.ModelSerializer):
+    articles = serializers.StringRelatedField(many=True)
+
     class Meta:
         model = Topic
-        fields = ('title', )
+        fields = ('id', 'title', 'description', 'articles')
 
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = ('title', 'content')
+        fields = ('id', 'title', 'content')
 

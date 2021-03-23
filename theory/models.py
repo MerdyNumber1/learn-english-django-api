@@ -3,6 +3,7 @@ from django.db import models
 
 class Topic(models.Model):
     title = models.CharField(max_length=200)
+    description = models.CharField(max_length=2000, blank=True)
 
     class Meta:
         verbose_name = 'Тема'
