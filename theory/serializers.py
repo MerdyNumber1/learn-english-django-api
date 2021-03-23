@@ -3,8 +3,22 @@ from rest_framework import serializers
 from .models import Topic, Article
 
 
+class ArticleListingField(serializers.RelatedField):
+    queryset = Article
+
+    def to_representation(self, value):
+        return {'id': value.id, 'title': value.title}
+
+
+class TopicListingField(serializers.RelatedField):
+    queryset = Topic
+
+    def to_representation(self, value):
+        return {'id': value.id, 'title': value.title}
+
+
 class TopicSerializer(serializers.ModelSerializer):
-    articles = serializers.StringRelatedField(many=True)
+    articles = ArticleListingField(many=True)
 
     class Meta:
         model = Topic
@@ -12,7 +26,9 @@ class TopicSerializer(serializers.ModelSerializer):
 
 
 class ArticleSerializer(serializers.ModelSerializer):
+    topic = TopicListingField()
+
     class Meta:
         model = Article
-        fields = ('id', 'title', 'content')
+        fields = ('id', 'title', 'content', 'topic')
 
