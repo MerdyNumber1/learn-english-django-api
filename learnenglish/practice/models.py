@@ -11,7 +11,7 @@ class Exercise(models.Model):
         on_delete=models.CASCADE,
         related_name='correct_exercises'
     )
-    topic = models.ForeignKey(Topic, on_delete=models.CASCADE, related_name='topics')
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE, related_name='exercises')
 
     class Meta:
         verbose_name = 'Задание'

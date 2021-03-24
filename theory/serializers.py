@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from .models import Topic, Article
+from practice.serializers import ExerciseListingField
 
 
 class ArticleListingField(serializers.RelatedField):
@@ -19,10 +20,11 @@ class TopicListingField(serializers.RelatedField):
 
 class TopicSerializer(serializers.ModelSerializer):
     articles = ArticleListingField(many=True)
+    exercises = ExerciseListingField(many=True)
 
     class Meta:
         model = Topic
-        fields = ('id', 'title', 'description', 'articles')
+        fields = ('id', 'title', 'description', 'articles', 'exercises')
 
 
 class ArticleSerializer(serializers.ModelSerializer):
