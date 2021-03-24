@@ -6,10 +6,10 @@ from .managers import UserManager
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    username = models.CharField(max_length=56)
+    username = models.CharField(max_length=56, verbose_name='имя')
     email = models.EmailField(db_index=True, unique=True)
-    is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True, verbose_name='активен')
+    is_staff = models.BooleanField(default=False, verbose_name='администратор')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -23,8 +23,8 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.created_at.strftime('%d.%m.%Y')
 
     class Meta:
-        verbose_name = 'Пользователь'
-        verbose_name_plural = 'Пользователи'
+        verbose_name = 'пользователь'
+        verbose_name_plural = 'пользователи'
 
     def __str__(self) -> str:
         return str(self.email)
