@@ -2,15 +2,13 @@ from rest_framework import serializers
 
 from .models import Exercise
 
+from core.serializers import StringPrimaryKeyRelatedField
+from theory.models import Topic
+
 
 class ExerciseSerializer(serializers.ModelSerializer):
+    topic = StringPrimaryKeyRelatedField(queryset=Topic)
+
     class Meta:
         model = Exercise
-        fields = ('title', 'description', 'correct_option')
-
-
-class ExerciseListingField(serializers.RelatedField):
-    queryset = Exercise
-
-    def to_representation(self, value):
-        return {'id': value.id, 'title': value.title}
+        fields = ('title', 'description', 'topic')

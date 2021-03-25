@@ -1,26 +1,14 @@
 from rest_framework import serializers
 
 from .models import Topic, Article
-from practice.serializers import ExerciseListingField
 
-
-class ArticleListingField(serializers.RelatedField):
-    queryset = Article
-
-    def to_representation(self, value):
-        return {'id': value.id, 'title': value.title}
-
-
-class TopicListingField(serializers.RelatedField):
-    queryset = Topic
-
-    def to_representation(self, value):
-        return {'id': value.id, 'title': value.title}
+from core.serializers import StringPrimaryKeyRelatedField
+from practice.models import Exercise
 
 
 class TopicSerializer(serializers.ModelSerializer):
-    articles = ArticleListingField(many=True)
-    exercises = ExerciseListingField(many=True)
+    articles = StringPrimaryKeyRelatedField(queryset=Article, many=True)
+    exercises = StringPrimaryKeyRelatedField(queryset=Exercise, many=True)
 
     class Meta:
         model = Topic
@@ -28,7 +16,7 @@ class TopicSerializer(serializers.ModelSerializer):
 
 
 class ArticleSerializer(serializers.ModelSerializer):
-    topic = TopicListingField()
+    topic = StringPrimaryKeyRelatedField(queryset=Topic)
 
     class Meta:
         model = Article
