@@ -12,3 +12,4 @@ class ExerciseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Exercise
         fields = ('title', 'description', 'topic')
+
