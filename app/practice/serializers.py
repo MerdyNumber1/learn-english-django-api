@@ -17,9 +17,9 @@ class ExerciseSerializer(serializers.ModelSerializer):
 
 class ExerciseReportSerializer(serializers.ModelSerializer):
     exercise = StringPrimaryKeyRelatedField(queryset=Exercise)
-    answer = StringPrimaryKeyRelatedField(queryset=ExerciseAnswerOption)
+    option = StringPrimaryKeyRelatedField(queryset=ExerciseAnswerOption)
     is_correct = serializers.ReadOnlyField()
 
     class Meta:
         model = ExerciseReport
-        fields = ('exercise', 'answer', 'is_correct')
+        fields = ('id', 'exercise', 'option', 'is_correct')
