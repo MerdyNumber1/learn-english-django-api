@@ -18,7 +18,7 @@ class Exercise(models.Model):
 
 class ExerciseAnswerOption(models.Model):
     option = models.CharField(max_length=200, verbose_name='ответ')
-    exercise = models.ForeignKey(Exercise, on_delete=models.CASCADE, verbose_name='задание')
+    exercise = models.ForeignKey(Exercise, on_delete=models.CASCADE, verbose_name='задание', related_name='options')
     is_correct = models.BooleanField(default=False, verbose_name='правильный ответ')
 
     class Meta:
@@ -37,3 +37,7 @@ class ExerciseReport(models.Model):
         related_name='reports',
         verbose_name='ответ'
     )
+
+    @property
+    def is_correct(self):
+        return self.exercise.is_correct
