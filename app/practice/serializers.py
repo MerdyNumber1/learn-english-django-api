@@ -1,5 +1,4 @@
-from rest_framework import serializers, status
-from rest_framework.response import Response
+from rest_framework import serializers
 
 from .models import Exercise, ExerciseAnswerOption, ExerciseReport
 
@@ -23,24 +22,36 @@ class ExerciseReportSerializer(serializers.ModelSerializer):
     option = StringPrimaryKeyRelatedField(read_only=True)
     option_id = serializers.IntegerField(write_only=True)
 
+    user = StringPrimaryKeyRelatedField(read_only=True)
+
     is_correct = serializers.ReadOnlyField()
 
     class Meta:
         model = ExerciseReport
-        fields = ('id', 'exercise', 'option', 'is_correct', 'exercise_id', 'option_id')
+        fields = ('id', 'exercise', 'option', 'is_correct', 'exercise_id', 'option_id', 'user', 'user_id')
 
-    def create(self, validated_data):
-        option = ExerciseAnswerOption.objects.get(pk=validated_data.pop('option_id'))
-        exercise = Exercise.objects.get(pk=validated_data.pop('exercise_id'))
+    def create(self, validated_data) -> ExerciseReport:
+        try:
+            ExerciseReport.objects.get(user__id=self.context['request'].user.id)
+            raise serializers.ValidationError({'detail': 'Ответ на задание уже существует'})
+        except ExerciseReport.DoesNotExist:
+            pass
 
-        if option and exercise:
-            report = ExerciseReport.objects.create(answer=option, exercise=exercise)
-            report.save()
+        try:
+            option = ExerciseAnswerOption.objects.get(pk=validated_data.pop('option_id'))
+        except ExerciseAnswerOption.DoesNotExist:
+            raise serializers.ValidationError({'detail': 'Вариант ответа не найден'})
 
-            return report
+        try:
+            exercise = Exercise.objects.get(pk=validated_data.pop('exercise_id'))
+        except Exercise.DoesNotExist:
+            raise serializers.ValidationError({'detail': 'Задание не найдено'})
 
-        if not option:
-            raise serializers.ValidationError('Вариант ответа не найден')
-        if not exercise:
-            raise serializers.ValidationError('Задание не найдено')
+        report = ExerciseReport.objects.create(
+            answer=option,
+            exercise=exercise,
+            user=self.context['request'].user
+        )
+        report.save()
 
+        return report

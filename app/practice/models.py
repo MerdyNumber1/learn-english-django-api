@@ -1,6 +1,7 @@
 from django.db import models
 
 from theory.models import Topic
+from profile.models import User
 
 
 class Exercise(models.Model):
@@ -11,6 +12,9 @@ class Exercise(models.Model):
     class Meta:
         verbose_name = 'задание'
         verbose_name_plural = 'задания'
+
+    def correct_option(self) -> 'ExerciseAnswerOption':
+        return next(filter(lambda option: bool(option.is_correct), self.options), None)
 
     def __str__(self) -> str:
         return str(self.title)
@@ -37,7 +41,9 @@ class ExerciseReport(models.Model):
         related_name='reports',
         verbose_name='ответ'
     )
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reports', verbose_name='ученик')
 
     @property
-    def is_correct(self):
-        return self.exercise.is_correct
+    def is_correct(self) -> bool:
+        return self.answer.is_correct
+
