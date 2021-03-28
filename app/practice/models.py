@@ -13,8 +13,9 @@ class Exercise(models.Model):
         verbose_name = 'задание'
         verbose_name_plural = 'задания'
 
+    @property
     def correct_option(self) -> 'ExerciseAnswerOption':
-        return next(filter(lambda option: bool(option.is_correct), self.options), None)
+        return next(filter(lambda option: option.is_correct, self.options.all()), None)
 
     def __str__(self) -> str:
         return str(self.title)
@@ -46,4 +47,7 @@ class ExerciseReport(models.Model):
     @property
     def is_correct(self) -> bool:
         return self.answer.is_correct
+
+    class Meta:
+        unique_together = ('exercise', 'user')
 

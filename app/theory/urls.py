@@ -9,3 +9,4 @@ router.register(r'articles', ArticleViewSet, basename='theory-article')
 urlpatterns = [
     *router.urls,
 ]
+
