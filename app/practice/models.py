@@ -48,6 +48,10 @@ class ExerciseReport(models.Model):
     def is_correct(self) -> bool:
         return self.answer.is_correct
 
+    @property
+    def correct_option(self) -> ExerciseAnswerOption:
+        return self.exercise.correct_option
+
     class Meta:
         unique_together = ('exercise', 'user')
 
