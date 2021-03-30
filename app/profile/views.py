@@ -26,7 +26,7 @@ class UserViewSet(viewsets.ModelViewSet):
         elif request.method == 'PATCH':
             user = self.queryset.get(id=request.user.id)
 
-            if request.data['password']:
+            if request.data.get('password'):
                 request.data['password'] = make_password(request.data['password'])
 
             serializer = self.serializer_class(user, data=request.data, partial=True)
