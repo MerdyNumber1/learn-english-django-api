@@ -1,6 +1,7 @@
 import environ
 from pathlib import Path
 from datetime import timedelta
+import os
 
 env = environ.Env(DEBUG=(bool, False))
 
@@ -30,6 +31,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'corsheaders',
+    'django_summernote',
     'core',
     'profile',
     'practice',
@@ -138,3 +140,8 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 
 CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'

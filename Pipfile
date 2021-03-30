@@ -16,6 +16,7 @@ djangorestframework-simplejwt = "*"
 celery = "*"
 redis = "*"
 django-cors-headers = "*"
+django-summernote = "*"
 
 [dev-packages]
 mypy = "*"

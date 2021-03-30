@@ -15,7 +15,7 @@ class Topic(models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length=200, verbose_name='название')
-    content = models.CharField(max_length=10000, verbose_name='содержание')
+    content = models.CharField(max_length=100000, verbose_name='содержание')
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE, related_name='articles', verbose_name='тема')
 
     class Meta:
