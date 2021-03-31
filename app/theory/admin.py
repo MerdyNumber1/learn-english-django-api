@@ -10,6 +10,12 @@ class TopicAdmin(SummernoteModelAdmin):
 
 class ArticleAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
+    list_display = ('title', 'get_topic_title')
+
+    def get_topic_title(self, article):
+        return article.topic.title
+
+    get_topic_title.short_description = 'тема'
 
 
 admin.site.register(Topic, TopicAdmin)

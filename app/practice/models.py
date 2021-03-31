@@ -12,6 +12,7 @@ class Exercise(models.Model):
     class Meta:
         verbose_name = 'задание'
         verbose_name_plural = 'задания'
+        ordering = ('id',)
 
     @property
     def correct_option(self) -> 'ExerciseAnswerOption':

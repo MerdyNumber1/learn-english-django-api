@@ -20,3 +20,4 @@ class ExerciseReportViewSet(viewsets.ModelViewSet):
             return ExerciseReportDetailSerializer
 
         return ExerciseReportCreationSerializer
+

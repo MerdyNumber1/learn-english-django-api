@@ -13,3 +13,11 @@ class ExerciseAdmin(SummernoteModelAdmin):
     inlines = [ExerciseAnswerOptionInline]
     summernote_fields = ('description',)
 
+    list_display = ('title', 'get_topic_title')
+
+    def get_topic_title(self, article):
+        return article.topic.title
+
+    get_topic_title.short_description = 'тема'
+
+

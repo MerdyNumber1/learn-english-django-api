@@ -16,3 +16,4 @@ def create_superuser(user_data: UserDTO) -> User:
 
 def get_user_correct_reports(user_id: int) -> List[ExerciseReport]:
     return [report for report in ExerciseReport.objects.filter(user__id=user_id).all() if report.is_correct]
+
