@@ -14,7 +14,13 @@ migrate:
 	docker-compose --file docker-compose.dev.yml exec web_app pipenv run py app/manage.py migrate
 
 seed:
-	docker-compose --file docker-compose.dev.yml exec web_app pipenv run py app/manage.py loaddata dump.json
+	docker-compose --file docker-compose.dev.yml exec web_app pipenv run py app/manage.py loaddata data/web_app/dump.json
 
 dump:
-	docker-compose --file docker-compose.dev.yml exec web_app pipenv run py app/manage.py dumpdata --indent 4 -e sessions -e admin -e contenttypes -e auth.Permission > dump.json
+	docker-compose --file docker-compose.dev.yml exec web_app pipenv run py app/manage.py dumpdata --indent 4 -e sessions -e admin -e contenttypes -e auth.Permission > data/web_app/dump.json
+
+prod-build:
+	docker-compose build
+
+prod:
+	docker-compose up

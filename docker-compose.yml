@@ -14,7 +14,13 @@ services:
       - ./:/usr/src/app/
       - /usr/src/app/wait-for-it/
   nginx:
-
+    image: nginx:latest
+    env_file:
+      - .env
+    ports:
+      - ${NGINX_PORT}:${NGINX_PORT}
+    volumes:
+      - ./data/nginx:/etc/nginx/templates
   postgres:
     image: postgres
     restart: on-failure
