@@ -5,6 +5,7 @@ name = "pypi"
 
 [scripts]
 dev = "py app/manage.py runserver 0.0.0.0:$APP_PORT"
+prod = "gunicorn app.wsgi:application --bind 0.0.0.0:$APP_PORT"
 dump = "py app/manage.py dumpdata -e sessions -e admin -e contenttypes -e auth.Permission --indent 4  > data/dump.json"
 seed = "py app/manage.py loaddata dump.json"
 
@@ -19,6 +20,7 @@ celery = "*"
 redis = "*"
 django-cors-headers = "*"
 django-summernote = "*"
+gunicorn = "*"
 
 [dev-packages]
 mypy = "*"

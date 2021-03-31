@@ -1,4 +1,4 @@
-/data/postgres
+/data/postgres/
 .idea
 .env
 /wait-for-it

@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  web_app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    restart: on-failure
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    volumes:
+      - ./:/usr/src/app/
+      - /usr/src/app/wait-for-it/
+  nginx:
+
+  postgres:
+    image: postgres
+    restart: on-failure
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PW}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - ./data/postgres/data:/var/lib/postgresql/data
+    ports:
+      - ${POSTGRES_PORT}:5432
