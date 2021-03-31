@@ -5,6 +5,8 @@ name = "pypi"
 
 [scripts]
 dev = "py app/manage.py runserver 0.0.0.0:$APP_PORT"
+dump = "py app/manage.py dumpdata -e sessions -e admin -e contenttypes -e auth.Permission --indent 4  > data/dump.json"
+seed = "py app/manage.py loaddata dump.json"
 
 [packages]
 django = "*"

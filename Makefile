@@ -17,4 +17,4 @@ seed:
 	docker-compose --file docker-compose.dev.yml exec web_app pipenv run py app/manage.py loaddata dump.json
 
 dump:
-	docker-compose --file docker-compose.dev.yml exec web_app pipenv run py app/manage.py dumpdata --indent 4 > app/dump.json
+	docker-compose --file docker-compose.dev.yml exec web_app pipenv run py app/manage.py dumpdata --indent 4 -e sessions -e admin -e contenttypes -e auth.Permission > dump.json
