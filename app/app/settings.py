@@ -17,7 +17,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'corsheaders',
     'django_summernote',
+    'gunicorn',
     'core',
     'profile',
     'practice',
@@ -119,6 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+print(STATIC_ROOT)
 
 AUTH_USER_MODEL = 'profile.User'
 
@@ -139,7 +143,8 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'http://localhost:80', 'http://localhost:443']
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'http://localhost:80', 'http://localhost:443',
+                         'http://localhost:8081']
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')

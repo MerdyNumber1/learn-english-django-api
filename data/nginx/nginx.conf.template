@@ -1,10 +1,22 @@
+upstream web_app_server {
+    server web_app:${APP_PORT};
+}
+
 server {
     listen 0.0.0.0:${NGINX_PORT};
 
     location / {
-        proxy_pass http://web_app:${APP_PORT};
+        proxy_pass http://web_app_server;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header Host $host;
         proxy_redirect off;
+    }
+
+    location /static/ {
+        alias /var/www/static/;
+    }
+
+    location /media/ {
+        alias /var/www/media/;
     }
 }
