@@ -21,6 +21,8 @@ services:
       - ${NGINX_PORT}:${NGINX_PORT}
     volumes:
       - ./data/nginx:/etc/nginx/templates
+      - ./app/static/:/var/www/static/
+      - ./app/media/:/var/www/media/
   postgres:
     image: postgres
     restart: on-failure
