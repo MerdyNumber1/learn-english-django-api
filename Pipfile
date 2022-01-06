@@ -4,10 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-dev = "py app/manage.py runserver 0.0.0.0:$APP_PORT"
+dev = "python app/manage.py runserver 0.0.0.0:$APP_PORT"
 prod = "gunicorn --chdir app app.wsgi:application --bind 0.0.0.0:$APP_PORT"
-dump = "py app/manage.py dumpdata -e sessions -e admin -e contenttypes -e auth.Permission --indent 4  > data/web_app/dump.json"
-seed = "py app/manage.py loaddata data/web_app/dump.json"
+dump = "python app/manage.py dumpdata -e sessions -e admin -e contenttypes -e auth.Permission --indent 4  > data/web_app/dump.json"
+seed = "python app/manage.py loaddata data/web_app/dump.json"
 
 [packages]
 django = "*"
@@ -16,11 +16,12 @@ psycopg2 = "*"
 djangorestframework = "*"
 drf-yasg = "*"
 djangorestframework-simplejwt = "*"
-celery = "*"
 redis = "*"
 django-cors-headers = "*"
 django-summernote = "*"
 gunicorn = "*"
+channels = "*"
+channels-redis = "*"
 
 [dev-packages]
 mypy = "*"
