@@ -1,7 +1,7 @@
-import json
 from channels.generic.websocket import JsonWebsocketConsumer
 
-import services as chat_services
+from . import services as chat_services
+from .serializers import MessageSerializer
 
 
 class ChatConsumer(JsonWebsocketConsumer):
@@ -12,6 +12,10 @@ class ChatConsumer(JsonWebsocketConsumer):
         pass
 
     def receive_json(self, content):
-        message = chat_services.create_message(content)
+        serializer = MessageSerializer(data=content)
 
-        self.send_json(content=message)
+        if serializer.is_valid():
+            message = chat_services.create_message(content, self.scope['user'])
+            self.send_json(content=MessageSerializer(message).data)
+
+
