@@ -2,9 +2,11 @@ version: "3"
 
 services:
   web_app:
+    command: ./wait-for-it/wait-for-it.sh postgres:$POSTGRES_PORT -- pipenv run dev
     build:
       context: ./
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
+      target: base
     env_file:
       - .env
     restart: on-failure

@@ -1,0 +1,196 @@
+[2022-02-12 22:01:40 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2022-02-12 22:01:40 +0000] [1] [INFO] Listening at: http://0.0.0.0:8090 (1)
+[2022-02-12 22:01:40 +0000] [1] [INFO] Using worker: sync
+[2022-02-12 22:01:40 +0000] [25] [INFO] Booting worker with pid: 25
+[2022-02-12 22:08:16 +0000] [1] [INFO] Handling signal: term
+[2022-02-12 22:08:16 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2022-02-12 22:08:16 +0000] [1] [INFO] Shutting down: Master
+[2022-02-12 22:08:25 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2022-02-12 22:08:25 +0000] [1] [INFO] Listening at: http://0.0.0.0:8090 (1)
+[2022-02-12 22:08:25 +0000] [1] [INFO] Using worker: sync
+[2022-02-12 22:08:25 +0000] [24] [INFO] Booting worker with pid: 24
+[2022-02-12 22:08:25 +0000] [25] [INFO] Booting worker with pid: 25
+[2022-02-12 22:08:25 +0000] [26] [INFO] Booting worker with pid: 26
+[2022-02-12 22:08:25 +0000] [27] [INFO] Booting worker with pid: 27
+[2022-02-12 22:08:25 +0000] [28] [INFO] Booting worker with pid: 28
+[2022-02-12 22:08:25 +0000] [29] [INFO] Booting worker with pid: 29
+[2022-02-12 22:08:25 +0000] [30] [INFO] Booting worker with pid: 30
+[2022-02-12 22:08:25 +0000] [31] [INFO] Booting worker with pid: 31
+[2022-02-12 22:10:28 +0000] [1] [INFO] Handling signal: term
+[2022-02-12 22:10:28 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2022-02-12 22:10:28 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2022-02-12 22:10:28 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2022-02-12 22:10:28 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2022-02-12 22:10:28 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2022-02-12 22:10:28 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2022-02-12 22:10:28 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2022-02-12 22:10:28 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2022-02-12 22:10:28 +0000] [1] [INFO] Shutting down: Master
+[2022-02-12 22:10:34 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2022-02-12 22:10:34 +0000] [1] [INFO] Listening at: http://0.0.0.0:8090 (1)
+[2022-02-12 22:10:34 +0000] [1] [INFO] Using worker: sync
+[2022-02-12 22:10:34 +0000] [24] [INFO] Booting worker with pid: 24
+[2022-02-12 22:10:35 +0000] [25] [INFO] Booting worker with pid: 25
+[2022-02-12 22:10:35 +0000] [26] [INFO] Booting worker with pid: 26
+[2022-02-12 22:10:35 +0000] [27] [INFO] Booting worker with pid: 27
+[2022-02-12 22:10:35 +0000] [28] [INFO] Booting worker with pid: 28
+[2022-02-12 22:10:35 +0000] [29] [INFO] Booting worker with pid: 29
+[2022-02-12 22:10:35 +0000] [30] [INFO] Booting worker with pid: 30
+[2022-02-12 22:10:35 +0000] [31] [INFO] Booting worker with pid: 31
+[2022-02-12 22:14:06 +0000] [1] [INFO] Handling signal: term
+[2022-02-12 22:14:06 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2022-02-12 22:14:06 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2022-02-12 22:14:06 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2022-02-12 22:14:06 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2022-02-12 22:14:06 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2022-02-12 22:14:06 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2022-02-12 22:14:06 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2022-02-12 22:14:06 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2022-02-12 22:14:06 +0000] [1] [INFO] Shutting down: Master
+[2022-02-12 22:14:12 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2022-02-12 22:14:12 +0000] [1] [INFO] Listening at: http://0.0.0.0:8090 (1)
+[2022-02-12 22:14:12 +0000] [1] [INFO] Using worker: sync
+[2022-02-12 22:14:12 +0000] [25] [INFO] Booting worker with pid: 25
+[2022-02-12 22:14:12 +0000] [26] [INFO] Booting worker with pid: 26
+[2022-02-12 22:14:12 +0000] [27] [INFO] Booting worker with pid: 27
+[2022-02-12 22:14:12 +0000] [28] [INFO] Booting worker with pid: 28
+[2022-02-12 22:14:12 +0000] [29] [INFO] Booting worker with pid: 29
+[2022-02-12 22:14:12 +0000] [30] [INFO] Booting worker with pid: 30
+[2022-02-12 22:14:12 +0000] [31] [INFO] Booting worker with pid: 31
+[2022-02-12 22:14:12 +0000] [32] [INFO] Booting worker with pid: 32
+[2022-02-12 22:14:28 +0000] [1] [INFO] Handling signal: term
+[2022-02-12 22:14:28 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2022-02-12 22:14:28 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2022-02-12 22:14:28 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2022-02-12 22:14:28 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2022-02-12 22:14:28 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2022-02-12 22:14:28 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2022-02-12 22:14:28 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2022-02-12 22:14:28 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2022-02-12 22:14:28 +0000] [1] [INFO] Shutting down: Master
+[2022-02-12 22:14:34 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2022-02-12 22:14:34 +0000] [1] [INFO] Listening at: http://0.0.0.0:8090 (1)
+[2022-02-12 22:14:34 +0000] [1] [INFO] Using worker: sync
+[2022-02-12 22:14:34 +0000] [24] [INFO] Booting worker with pid: 24
+[2022-02-12 22:14:34 +0000] [25] [INFO] Booting worker with pid: 25
+[2022-02-12 22:14:34 +0000] [26] [INFO] Booting worker with pid: 26
+[2022-02-12 22:14:34 +0000] [27] [INFO] Booting worker with pid: 27
+[2022-02-12 22:14:34 +0000] [28] [INFO] Booting worker with pid: 28
+[2022-02-12 22:14:34 +0000] [29] [INFO] Booting worker with pid: 29
+[2022-02-12 22:14:34 +0000] [30] [INFO] Booting worker with pid: 30
+[2022-02-12 22:14:34 +0000] [31] [INFO] Booting worker with pid: 31
+[2022-02-12 22:15:07 +0000] [1] [INFO] Handling signal: term
+[2022-02-12 22:15:07 +0000] [24] [INFO] Worker exiting (pid: 24)
+[2022-02-12 22:15:07 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2022-02-12 22:15:07 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2022-02-12 22:15:07 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2022-02-12 22:15:07 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2022-02-12 22:15:07 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2022-02-12 22:15:07 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2022-02-12 22:15:07 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2022-02-12 22:15:08 +0000] [1] [INFO] Shutting down: Master
+[2022-02-12 22:15:14 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2022-02-12 22:15:14 +0000] [1] [INFO] Listening at: http://0.0.0.0:8090 (1)
+[2022-02-12 22:15:14 +0000] [1] [INFO] Using worker: sync
+[2022-02-12 22:15:14 +0000] [25] [INFO] Booting worker with pid: 25
+[2022-02-12 22:15:14 +0000] [26] [INFO] Booting worker with pid: 26
+[2022-02-12 22:15:14 +0000] [27] [INFO] Booting worker with pid: 27
+[2022-02-12 22:15:14 +0000] [28] [INFO] Booting worker with pid: 28
+[2022-02-12 22:15:14 +0000] [29] [INFO] Booting worker with pid: 29
+[2022-02-12 22:15:14 +0000] [30] [INFO] Booting worker with pid: 30
+[2022-02-12 22:15:14 +0000] [31] [INFO] Booting worker with pid: 31
+[2022-02-12 22:15:14 +0000] [32] [INFO] Booting worker with pid: 32
+[2022-02-12 22:15:24 +0000] [1] [INFO] Handling signal: term
+[2022-02-12 22:15:24 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2022-02-12 22:15:24 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2022-02-12 22:15:24 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2022-02-12 22:15:24 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2022-02-12 22:15:24 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2022-02-12 22:15:24 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2022-02-12 22:15:24 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2022-02-12 22:15:24 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2022-02-12 22:15:25 +0000] [1] [INFO] Shutting down: Master
+[2022-02-12 22:15:30 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2022-02-12 22:15:30 +0000] [1] [INFO] Listening at: http://0.0.0.0:8090 (1)
+[2022-02-12 22:15:30 +0000] [1] [INFO] Using worker: sync
+[2022-02-12 22:15:30 +0000] [25] [INFO] Booting worker with pid: 25
+[2022-02-12 22:15:31 +0000] [26] [INFO] Booting worker with pid: 26
+[2022-02-12 22:15:31 +0000] [27] [INFO] Booting worker with pid: 27
+[2022-02-12 22:15:31 +0000] [28] [INFO] Booting worker with pid: 28
+[2022-02-12 22:15:31 +0000] [29] [INFO] Booting worker with pid: 29
+[2022-02-12 22:15:31 +0000] [30] [INFO] Booting worker with pid: 30
+[2022-02-12 22:15:31 +0000] [31] [INFO] Booting worker with pid: 31
+[2022-02-12 22:15:31 +0000] [32] [INFO] Booting worker with pid: 32
+[2022-02-12 22:16:39 +0000] [1] [INFO] Handling signal: term
+[2022-02-12 22:16:39 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2022-02-12 22:16:39 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2022-02-12 22:16:39 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2022-02-12 22:16:39 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2022-02-12 22:16:39 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2022-02-12 22:16:39 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2022-02-12 22:16:39 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2022-02-12 22:16:39 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2022-02-12 22:16:40 +0000] [1] [INFO] Shutting down: Master
+[2022-02-12 22:16:53 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2022-02-12 22:16:53 +0000] [1] [INFO] Listening at: http://0.0.0.0:8090 (1)
+[2022-02-12 22:16:53 +0000] [1] [INFO] Using worker: sync
+[2022-02-12 22:16:53 +0000] [25] [INFO] Booting worker with pid: 25
+[2022-02-12 22:16:53 +0000] [26] [INFO] Booting worker with pid: 26
+[2022-02-12 22:16:53 +0000] [27] [INFO] Booting worker with pid: 27
+[2022-02-12 22:16:53 +0000] [28] [INFO] Booting worker with pid: 28
+[2022-02-12 22:16:53 +0000] [29] [INFO] Booting worker with pid: 29
+[2022-02-12 22:16:53 +0000] [30] [INFO] Booting worker with pid: 30
+[2022-02-12 22:16:53 +0000] [31] [INFO] Booting worker with pid: 31
+[2022-02-12 22:16:53 +0000] [32] [INFO] Booting worker with pid: 32
+[2022-02-12 22:17:16 +0000] [1] [INFO] Handling signal: term
+[2022-02-12 22:17:16 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2022-02-12 22:17:16 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2022-02-12 22:17:16 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2022-02-12 22:17:16 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2022-02-12 22:17:16 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2022-02-12 22:17:16 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2022-02-12 22:17:16 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2022-02-12 22:17:16 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2022-02-12 22:17:16 +0000] [1] [INFO] Shutting down: Master
+[2022-02-12 22:17:22 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2022-02-12 22:17:22 +0000] [1] [INFO] Listening at: http://0.0.0.0:8090 (1)
+[2022-02-12 22:17:22 +0000] [1] [INFO] Using worker: sync
+[2022-02-12 22:17:22 +0000] [25] [INFO] Booting worker with pid: 25
+[2022-02-12 22:17:22 +0000] [26] [INFO] Booting worker with pid: 26
+[2022-02-12 22:17:23 +0000] [27] [INFO] Booting worker with pid: 27
+[2022-02-12 22:17:23 +0000] [28] [INFO] Booting worker with pid: 28
+[2022-02-12 22:17:23 +0000] [29] [INFO] Booting worker with pid: 29
+[2022-02-12 22:17:23 +0000] [30] [INFO] Booting worker with pid: 30
+[2022-02-12 22:17:23 +0000] [31] [INFO] Booting worker with pid: 31
+[2022-02-12 22:17:23 +0000] [32] [INFO] Booting worker with pid: 32
+[2022-02-12 22:21:10 +0000] [1] [INFO] Handling signal: term
+[2022-02-12 22:21:10 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2022-02-12 22:21:10 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2022-02-12 22:21:10 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2022-02-12 22:21:10 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2022-02-12 22:21:10 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2022-02-12 22:21:10 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2022-02-12 22:21:10 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2022-02-12 22:21:10 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2022-02-12 22:21:11 +0000] [1] [INFO] Shutting down: Master
+[2022-02-12 22:21:18 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2022-02-12 22:21:18 +0000] [1] [INFO] Listening at: http://0.0.0.0:8090 (1)
+[2022-02-12 22:21:18 +0000] [1] [INFO] Using worker: sync
+[2022-02-12 22:21:18 +0000] [25] [INFO] Booting worker with pid: 25
+[2022-02-12 22:21:18 +0000] [26] [INFO] Booting worker with pid: 26
+[2022-02-12 22:21:19 +0000] [27] [INFO] Booting worker with pid: 27
+[2022-02-12 22:21:19 +0000] [28] [INFO] Booting worker with pid: 28
+[2022-02-12 22:21:19 +0000] [29] [INFO] Booting worker with pid: 29
+[2022-02-12 22:21:19 +0000] [30] [INFO] Booting worker with pid: 30
+[2022-02-12 22:21:19 +0000] [31] [INFO] Booting worker with pid: 31
+[2022-02-12 22:21:19 +0000] [32] [INFO] Booting worker with pid: 32
+[2022-02-12 22:26:17 +0000] [1] [INFO] Handling signal: term
+[2022-02-12 22:26:17 +0000] [31] [INFO] Worker exiting (pid: 31)
+[2022-02-12 22:26:17 +0000] [28] [INFO] Worker exiting (pid: 28)
+[2022-02-12 22:26:17 +0000] [26] [INFO] Worker exiting (pid: 26)
+[2022-02-12 22:26:17 +0000] [30] [INFO] Worker exiting (pid: 30)
+[2022-02-12 22:26:17 +0000] [29] [INFO] Worker exiting (pid: 29)
+[2022-02-12 22:26:17 +0000] [32] [INFO] Worker exiting (pid: 32)
+[2022-02-12 22:26:17 +0000] [25] [INFO] Worker exiting (pid: 25)
+[2022-02-12 22:26:17 +0000] [27] [INFO] Worker exiting (pid: 27)
+[2022-02-12 22:26:18 +0000] [1] [INFO] Shutting down: Master

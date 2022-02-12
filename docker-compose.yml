@@ -2,14 +2,30 @@ version: "3"
 
 services:
   web_app:
+    command: ./wait-for-it/wait-for-it.sh postgres:$POSTGRES_PORT -- pipenv run prod
     build:
       context: ./
       dockerfile: Dockerfile
+      target: prod
     env_file:
       - .env
     restart: on-failure
     ports:
       - ${APP_PORT}:${APP_PORT}
+    volumes:
+      - ./:/usr/src/app/
+      - /usr/src/app/wait-for-it/
+  app_channels:
+    command: ./wait-for-it/wait-for-it.sh postgres:$POSTGRES_PORT -- pipenv run channels
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: prod
+    env_file:
+      - .env
+    restart: on-failure
+    ports:
+      - ${CHANNELS_PORT}:${CHANNELS_PORT}
     volumes:
       - ./:/usr/src/app/
       - /usr/src/app/wait-for-it/
@@ -34,3 +50,10 @@ services:
       - ./data/postgres/data:/var/lib/postgresql/data
     ports:
       - ${POSTGRES_PORT}:5432
+  redis:
+    image: "redis:alpine"
+    command: redis-server --requirepass ${REDIS_PW}
+    ports:
+      - ${REDIS_PORT}:6379
+    volumes:
+      - ./data/redis/data:/var/lib/redis

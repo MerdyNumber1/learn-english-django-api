@@ -53,6 +53,8 @@ MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS')
+
 ROOT_URLCONF = 'app.urls'
 
 TEMPLATES = [
@@ -152,7 +154,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [(env('REDIS_HOST'), env('REDIS_PORT'))],
+            "hosts": [(f"redis://:{env('REDIS_PW')}@{env('REDIS_HOST')}:{env('REDIS_PORT')}/0")],
         },
     },
 }

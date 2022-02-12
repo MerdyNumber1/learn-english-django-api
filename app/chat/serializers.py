@@ -21,5 +21,3 @@ class MessageSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return create_message(validated_data, self.context['request'].user)
-
-

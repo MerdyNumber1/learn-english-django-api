@@ -5,7 +5,8 @@ name = "pypi"
 
 [scripts]
 dev = "python app/manage.py runserver 0.0.0.0:$APP_PORT"
-prod = "gunicorn --chdir app app.wsgi:application --bind 0.0.0.0:$APP_PORT"
+prod = "gunicorn --chdir app app.wsgi:application --bind 0.0.0.0:$APP_PORT --log-file=./../logs/error.log -w $APP_WORKERS"
+channels = "bash -c 'cd app && daphne -b 0.0.0.0 -p $CHANNELS_PORT app.asgi:application'"
 dump = "python app/manage.py dumpdata -e sessions -e admin -e contenttypes -e auth.Permission --indent 4  > data/web_app/dump.json"
 seed = "python app/manage.py loaddata data/web_app/dump.json"
 
@@ -22,6 +23,8 @@ django-summernote = "*"
 gunicorn = "*"
 channels = "*"
 channels-redis = "*"
+daphne = "*"
+backports-zoneinfo = "*"
 
 [dev-packages]
 mypy = "*"
