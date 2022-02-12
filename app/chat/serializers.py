@@ -6,9 +6,11 @@ from .services import create_message
 from theory.models import Article
 from practice.models import Exercise
 
+from profile.serializers import UserSerializer
+
 
 class MessageSerializer(serializers.ModelSerializer):
-    user = serializers.PrimaryKeyRelatedField(read_only=True)
+    user = UserSerializer(read_only=True)
     article = serializers.PrimaryKeyRelatedField(queryset=Article.objects.all(), required=False)
     exercise = serializers.PrimaryKeyRelatedField(queryset=Exercise.objects.all(), required=False)
 
