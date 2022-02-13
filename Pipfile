@@ -25,6 +25,7 @@ channels = "*"
 channels-redis = "*"
 daphne = "*"
 backports-zoneinfo = "*"
+asgiref = "*"
 
 [dev-packages]
 mypy = "*"
