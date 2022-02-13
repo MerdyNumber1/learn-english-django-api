@@ -22,9 +22,10 @@ class ChatConsumer(JsonWebsocketConsumer):
                 {
                     "type": "chat.message",
                     "text": content,
+                    "user": self.scope['user']
                 },
             )
 
     def chat_message(self, event):
-        message = chat_services.create_message(event['text'], self.scope['user'])
+        message = chat_services.create_message(event['text'], event["user"])
         self.send_json(content=MessageSerializer(message).data)
