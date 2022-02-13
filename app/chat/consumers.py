@@ -1,6 +1,8 @@
 from channels.generic.websocket import JsonWebsocketConsumer
 from asgiref.sync import async_to_sync
 
+from profile.models import User
+
 from . import services as chat_services
 from .serializers import MessageSerializer
 
@@ -22,10 +24,10 @@ class ChatConsumer(JsonWebsocketConsumer):
                 {
                     "type": "chat.message",
                     "text": content,
-                    "user": self.scope['user']
+                    "user_id": self.scope['user'].id
                 },
             )
 
     def chat_message(self, event):
-        message = chat_services.create_message(event['text'], event["user"])
+        message = chat_services.create_message(event['text'], User.objects.get(pk=event["user_id"]))
         self.send_json(content=MessageSerializer(message).data)
